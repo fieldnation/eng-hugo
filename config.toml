@@ -1,3 +1,31 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+BaseUrl = "http://eng.fieldnation.com/"
+LanguageCode = "en-us"
+Title = "Field Nation"
+paginate = 5
+# DisqusShortname = "YOUR_SHORT_NAME_HERE"
+Copyright = "All rights reserved - 2017"
+canonifyurls = true
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+
+[indexes]
+  catagory = "catagories"
+
+[params]
+  description = "this is my description"
+  cover = "images/cover.jpg"
+  author = "Valère JEANTET"
+  authorlocation = "Paris, France"
+  authorwebsite = "http://vjeantet.fr"
+  bio= "my bio"
+  logo = "images/logo.png"
+  googleAnalyticsUserID = "UA-79101-12"
+  # Optional RSS-Link, if not provided it defaults to the standard index.xml
+  # RSSLink = "http://feeds.feedburner.com/..."
+  githubName = "fieldnation"
+  twitterName = "fieldnation"
+  facebookName = "fieldnation"
+  # linkedinName = "fieldnation"
+  # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
+  hideHUGOSupport = false

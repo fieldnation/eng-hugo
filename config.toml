@@ -13,13 +13,14 @@ publishdir = "public"
   catagory = "catagories"
 
 [params]
-  description = "this is my description"
-  cover = "images/cover.jpg"
+  description = "get work done"
+  # cover = "images/cover.jpg"
   author = "Valère JEANTET"
   authorlocation = "Paris, France"
   authorwebsite = "http://vjeantet.fr"
   bio= "my bio"
   logo = "images/logo.png"
+  cover = "images/1500x500_cover.jpg"
   googleAnalyticsUserID = "UA-79101-12"
   # Optional RSS-Link, if not provided it defaults to the standard index.xml
   # RSSLink = "http://feeds.feedburner.com/..."

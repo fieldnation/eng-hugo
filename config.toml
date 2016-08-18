@@ -41,11 +41,11 @@ Theme = "casper"
   url = "/"
   weight = -120
 [[menu.main]]
-  name = "Github repos"
-  pre = "<h3>Follow Us</h3>"
+  name = "Github"
+  pre = "<h3>Find Us On:</h3>"
   url = "https://github.com/fieldnation"
   weight = 100
 [[menu.main]]
-  name = "Twitter timeline"
+  name = "Twitter"
   url = "https://twitter.com/fieldnation"
   weight = 101

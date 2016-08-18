@@ -1,24 +1,25 @@
 BaseUrl = "http://eng.fieldnation.com/"
 LanguageCode = "en-us"
 Title = "Field Nation"
-paginate = 5
+Paginate = 5
 # DisqusShortname = "YOUR_SHORT_NAME_HERE"
-Copyright = "All rights reserved - 2017"
-canonifyurls = true
-contentdir = "content"
-layoutdir = "layouts"
-publishdir = "public"
+Copyright = "All rights reserved - 2016"
+CanonifyURLs = true
+ContentDir = "content"
+PublishDir = "public"
+PluralizelistTitles = false
+Theme = "casper"
 
 [indexes]
   catagory = "catagories"
 
 [params]
-  description = "get work done"
+  description = "Find Work. Post Work. Manage Work."
   # cover = "images/cover.jpg"
-  author = "Valère JEANTET"
-  authorlocation = "Paris, France"
-  authorwebsite = "http://vjeantet.fr"
-  bio= "my bio"
+  author = "Field Nation"
+  authorlocation = "Minneapolis, Minnesota"
+  authorwebsite = "https://fieldnation.com"
+  bio= "Get Work Done with Field Nation"
   logo = "images/logo.png"
   cover = "images/1500x500_cover.jpg"
   googleAnalyticsUserID = "UA-79101-12"
@@ -30,3 +31,21 @@ publishdir = "public"
   # linkedinName = "fieldnation"
   # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
   hideHUGOSupport = false
+
+[permalinks]
+  post = "/:slug/"
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "/"
+  weight = -120
+[[menu.main]]
+  name = "Github repos"
+  pre = "<h3>Follow Us</h3>"
+  url = "https://github.com/fieldnation"
+  weight = 100
+[[menu.main]]
+  name = "Twitter timeline"
+  url = "https://twitter.com/fieldnation"
+  weight = 101

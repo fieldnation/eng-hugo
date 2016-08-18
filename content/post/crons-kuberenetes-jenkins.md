@@ -1,7 +1,15 @@
 +++
-date = "2016-08-18T13:11:19-05:00"
-draft = true
+author = "John Behling"
+comments = true
+date = "2016-08-18T15:27:31-05:00"
+draft = false
+image = ""
+menu = ""
+share = true
+slug = "crons-kubernetes-jenkins"
+tags = ["crons","kubernetes","jenkins"]
 title = "Teaching old crons new tricks with Jenkins and Kubernetes"
+
 +++
 
 # Teaching Old Crons New Tricks with Jenkins and Kubernetes
@@ -23,7 +31,7 @@ One possibility is to run the cron as a Kubernetes batch [job](http://kubernetes
 ## Jenkins to the rescue
 As we've been using Jenkins to trigger our Kubernetes deploys and rolling updates, we already have a template for executing `kubectl` commands against the kubernetes cluster, all we need to do is figure out the guts of the command, and feed Jenkins the interval to run it at.
 
-Recently I've become a big fan of the Jenkins Job DSL plugin. With a little bit of groovy and some data you can generate hundreds of jobs, and forever escape the tedium of manually creating jobs. 
+Recently I've become a big fan of the Jenkins Job DSL plugin. With a little bit of groovy and some data you can generate hundreds of jobs, and forever escape the tedium of manually creating jobs.
 
 So to solve our problem:
 

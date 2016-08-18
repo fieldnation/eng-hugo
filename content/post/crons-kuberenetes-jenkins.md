@@ -1,9 +1,9 @@
 +++
-author = "John Behling"
+author = "John_Behling"
 comments = true
 date = "2016-08-18T15:27:31-05:00"
 draft = false
-image = "/images/solartech.jpg"
+image = "images/solartech.jpg"
 menu = ""
 share = true
 slug = "crons-kubernetes-jenkins"

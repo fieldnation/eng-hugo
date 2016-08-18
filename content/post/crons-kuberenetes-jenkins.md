@@ -16,20 +16,15 @@ title = "Teaching old crons new tricks with Jenkins and Kubernetes"
 Field Nation is rapidly moving from a monolithic architecture to micro-services. To accomplish this on the infrastructure side we're utilizing [Kuberenetes](http://kubernetes.io). Shifting to the container mindset has been easier for some aspects of our app than others. One place, where some sys-ops Jiu Jitsu was required was on the running of cron jobs.
 
 ## Containers vs. Mystery
-One thing I love about containers is how they create clean single-function servers. This is the way servers truly should be: a stripped-down engine on which to run an app, no mystery, no drama, just the app. There's nothing nothing worse than turning off a server that you thought noone was using, and unleashing a fury of angry emails. Those stories generally end with some version of "Well there's this cron job on that server that Somebody set up, we don't really know what it does but.. clearly it's important"
+One thing I love about containers is how they create clean single-function servers. This is the way servers truly should be: a stripped-down engine on which to run an app, no mystery, no drama, just the app. There's nothing worse than turning off a server that you thought noone was using, and unleashing a fury of angry emails. Those stories generally end with some version of "Well there's this cron job on that server that Somebody set up, we don't really know what it does but.. clearly it's important"
 
-Containers provide a posisible solution to that mystery. However, we still need cron-like tasks. So how do we do that in this brave-new world of stateless single-function containers?
+Containers provide a possible solution to that mystery. However, we still need cron-like tasks. So how do we do that in this brave-new world of stateless single-function containers?
 
-Enter `kubectl exec`. Mirroring the semantics of `docker exec`, `kubectl exec` will run a command in a single Kubernetes pod, and return the exit status of that command.
+One possibility is to run the cron as a Kubernetes batch [job](http://kubernetes.io/docs/user-guide/jobs/). In that case the Kubernetes scheduler would create a single ephemeral instance to run the script, afterwards the container would go away. A downside to that approach is it creates a lot of container churn (some of these crons run every few minutes). What I'd much rather do is utilize the existing fleet of containers, and simply choose one to execute the script on. We can accomplish this via `kubectl exec`. Mirroring the semantics of `docker exec`, `kubectl exec` will run a command in a single Kubernetes pod, and return the exit status of that command.
 
-In our usecase, there are critical application functions that require our application source code, and presently run on a selected group of servers via the crontab.
-
-Placing this into the Kubernetes context, there will no longer be a dedicated group of cron machines, but rather the entire pool of containers that are eligible to run the script. We just need a mechanism for selecting a container, and making sure the script executes at the correct frequency.
-
-One possibility is to run the cron as a Kubernetes batch [job](http://kubernetes.io/docs/user-guide/jobs/). In that case the Kubernetes scheduler would create a single ephemeral instance to run the script, afterwards the container would go away. A downside to that approach is it creates a lot of container churn (some of these crons run every few minutes). What I'd much rather do is utilize the existing fleet of containers, and simply choose one to execute the script on.
 
 ## Jenkins to the rescue
-As we've been using Jenkins to trigger our Kubernetes deploys and rolling updates, we already have a template for executing `kubectl` commands against the kubernetes cluster, all we need to do is figure out the guts of the command, and feed Jenkins the interval to run it at.
+Now that we've got a solution for execution, we need a scheduler. As we've been using Jenkins to trigger our Kubernetes deploys and rolling updates, we already have a template for executing `kubectl` commands against the kubernetes cluster. All we need to do is figure out the guts of the command, and feed Jenkins the interval to run it at.
 
 Recently I've become a big fan of the Jenkins Job DSL plugin. With a little bit of groovy and some data you can generate hundreds of jobs, and forever escape the tedium of manually creating jobs.
 
@@ -37,7 +32,7 @@ So to solve our problem:
 
 * The Jenkins Job DSL would generate a job per cron
 * The Job would select a container for the pool of healthy instances, and run the cron reporting failure back to Jenkins
-
+* Jenkins provides an audit trail to trace back every execution, and trigger alerts on failure.
 The end result being full visibility into what our cron-like tasks are doing, when they're running, if they're failing etc. Let's look at some code.
 
 ## To the code!

@@ -13,7 +13,7 @@ title = "Teaching Old Crons New Tricks with Jenkins and Kubernetes"
 +++
 
 # Teaching Old Crons New Tricks with Jenkins and Kubernetes
-Field Nation is rapidly moving from a monolithic architecture to micro-services. To accomplish this on the infrastructure side, we’re utilizing Kuberenetes](http://kubernetes.io). Shifting to the container mindset has been easier for some aspects of our app than others. One place, where some sys-ops Jiu Jitsu was required was in the running of cron jobs.
+Field Nation is rapidly moving from a monolithic architecture to micro-services. To accomplish this on the infrastructure side, we’re utilizing [Kuberenetes](http://kubernetes.io). Shifting to the container mindset has been easier for some aspects of our app than others. One place, where some sys-ops Jiu Jitsu was required was in the running of cron jobs.
 
 ## Containers vs. Mystery
 One thing I love about containers is how they create clean single-function servers. This is the way servers truly should be: a stripped-down engine on which to run an app, no mystery, no drama, just the app. There’s nothing worse than turning off a server that you thought no one was using, and unleashing a fury of angry emails. Those stories generally end with some version of “Well there’s this cron job on that server that Somebody set up, we don’t really know what it does but.. clearly, it’s important.”

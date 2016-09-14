@@ -1,6 +1,6 @@
 BaseUrl = "http://eng.fieldnation.com/"
 LanguageCode = "en-us"
-Title = "Field Nation"
+Title = "Engineers @ Field Nation"
 Paginate = 5
 # DisqusShortname = "YOUR_SHORT_NAME_HERE"
 Copyright = "All rights reserved - 2016"
@@ -14,7 +14,7 @@ Theme = "casper"
   catagory = "catagories"
 
 [params]
-  description = "Find Work. Post Work. Manage Work."
+  description = "Online Marketplace Software Engineering"
   # cover = "images/cover.jpg"
   author = "Field Nation"
   authorlocation = "Minneapolis, Minnesota"
@@ -37,15 +37,19 @@ Theme = "casper"
 
 [[menu.main]]
   identifier = "blog"
-  name = "Blog"
+  name = "Engineering Blog"
   url = "/"
   weight = -120
 [[menu.main]]
-  name = "Github"
-  pre = "<h3>Find Us On:</h3>"
-  url = "https://github.com/fieldnation"
+  identifier = "fieldnation"
+  name = "Field Nation"
+  url = "https://www.fieldnation.com/"
   weight = 100
+[[menu.main]]
+  name = "Github"
+  url = "https://github.com/fieldnation"
+  weight = 101
 [[menu.main]]
   name = "Twitter"
   url = "https://twitter.com/fieldnation"
-  weight = 101
+  weight = 102

@@ -22,7 +22,7 @@ Theme = "casper"
   bio= "Get Work Done with Field Nation"
   logo = "images/logo.png"
   cover = "images/1500x500_cover.jpg"
-  googleAnalyticsUserID = "UA-79101-12"
+  googleAnalyticsUserID = "UA-3952637-6"
   # Optional RSS-Link, if not provided it defaults to the standard index.xml
   # RSSLink = "http://feeds.feedburner.com/..."
   githubName = "fieldnation"

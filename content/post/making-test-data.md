@@ -1,5 +1,5 @@
 +++
-author = "Tim Mader-Brown"
+author = "Tim_Mader-Brown"
 comments = true
 date = "2019-03-06"
 draft = false

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post on Engineers @ Field Nation</title>
+    <link>http://eng.fieldnation.com/post/</link>
+    <description>Recent content in Post on Engineers @ Field Nation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2016</copyright>
+    <lastBuildDate>Wed, 06 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://eng.fieldnation.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Making Test Data</title>
+      <link>http://eng.fieldnation.com/launching-micromn/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://eng.fieldnation.com/launching-micromn/</guid>
+      <description>Making Test Data Hello World!
+Today, I bring the Field Nation blog back to life after a 2+ year coma. What&amp;rsquo;s the topic for this sudden revival? One of my very favorite topics…. creating test data.
+What does a tent sitting in the middle of the tundra have to do with creating test data? This illustrates a very important point in regards to testing. If someone were to test this tent, they would set it up in different climates, at different times of the year, and maybe using some different add-ons for the tent.</description>
+    </item>
+    
+    <item>
+      <title>The Launch Of MicroMN</title>
+      <link>http://eng.fieldnation.com/launching-micromn/</link>
+      <pubDate>Tue, 06 Sep 2016 14:47:29 -0500</pubDate>
+      
+      <guid>http://eng.fieldnation.com/launching-micromn/</guid>
+      <description>The New Minnesota Microservice Community. We&amp;rsquo;re excited to announce the launch of MicroMN. Field Nation invites Minnesota high-tech companies and talent to build a local community to share and learn about microservice transformations, technologies, and architecture. Please visit the official press release here or visit the MicroMN Meetup to RSVP.</description>
+    </item>
+    
+    <item>
+      <title>Teaching Old Crons New Tricks with Jenkins and Kubernetes</title>
+      <link>http://eng.fieldnation.com/crons-kubernetes-jenkins/</link>
+      <pubDate>Thu, 18 Aug 2016 15:27:31 -0500</pubDate>
+      
+      <guid>http://eng.fieldnation.com/crons-kubernetes-jenkins/</guid>
+      <description>Teaching Old Crons New Tricks with Jenkins and Kubernetes Field Nation is rapidly moving from a monolithic architecture to micro-services. To accomplish this on the infrastructure side, we’re utilizing Kuberenetes. Shifting to the container mindset has been easier for some aspects of our app than others. One place, where some sys-ops Jiu Jitsu was required was in the running of cron jobs.
+Containers vs. Mystery One thing I love about containers is how they create clean single-function servers.</description>
+    </item>
+    
+  </channel>
+</rss>

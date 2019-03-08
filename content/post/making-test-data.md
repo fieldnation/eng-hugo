@@ -12,14 +12,11 @@ title = "Making Test Data"
 
 +++
 
-# Making Test Data
-
-
 Hello World!
 
 Today, I bring the Field Nation blog back to life after a 2+ year coma. What's the topic for this sudden revival?  One of my very favorite topics…. creating test data.
 
-![tent in the tundra](./../../static/images/ice_tent.jpg)
+![tent in the tundra](/images/ice_tent.jpg)
 
 What does a tent sitting in the middle of the tundra have to do with creating test data? This illustrates a very important point in regards to testing.  If someone were to test this tent, they would set it up in different climates, at different times of the year, and maybe using some different add-ons for the tent. For example, they might test a “wind shield” feature in northern Minnesota, from January 1-5.  The tester would bring the supplies to that site, set up the tent and report their findings.  It's not likely that the tester would be manufacturing the tent from scratch, the prerequisite for the testing is that a tent is available for testing, and ready o use.
 
@@ -31,6 +28,6 @@ Here’s another example, let's say Facebook wants to test whether a user can jo
 
 One last note, since we created a web service for the test-data-generator, we thought "Hey, maybe if we made a UI for this then other people, like support or even sales could use it".  So we created a UI for it that looks like this…
 
-![test data generator ui](./../../static/images/tdgUI.png)
+![test data generator ui](/images/tdgUI.png)
 
 This is all very new at Field Nation, so I'll report back more findings as they come up.

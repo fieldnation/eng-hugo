@@ -6,7 +6,7 @@ draft = false
 image = "images/bug.png"
 menu = ""
 share = true
-slug = "Launching-MicroMN"
+slug = "making-test-data"
 tags = ["Field Nation", "QA Automation Architect", "test automation"]
 title = "Making Test Data"
 

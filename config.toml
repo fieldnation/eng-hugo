@@ -1,4 +1,4 @@
-BaseUrl = "http://eng.fieldnation.com/"
+BaseUrl = "https://eng.fieldnation.com/"
 LanguageCode = "en-us"
 Title = "Engineers @ Field Nation"
 Paginate = 5

@@ -6,7 +6,7 @@ Paginate = 5
 Copyright = "All rights reserved - 2016"
 CanonifyURLs = true
 ContentDir = "content"
-PublishDir = "public"
+PublishDir = "docs"
 PluralizelistTitles = false
 Theme = "casper"
 

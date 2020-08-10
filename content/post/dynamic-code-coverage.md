@@ -3,11 +3,11 @@ author = "Tim_Mader-Brown"
 comments = true
 date = "2020-08-07"
 draft = false
-image = "images/bug.jpg"
+image = "images/adapt.jpeg"
 menu = ""
 share = true
-slug = "making-test-data"
-tags = ["Field Nation", "QA Automation Architect", "test automation", "unit testing", "code coverage"]
+slug = "dynamic-code-coverage"
+tags = ["Field Nation", "test automation", "unit testing", "code coverage", "jest"]
 title = "Keeping Up with Unit Testing"
 
 +++

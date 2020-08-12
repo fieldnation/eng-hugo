@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2019</copyright>
-    <lastBuildDate>Fri, 07 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://eng.fieldnation.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Keeping Up with Unit Testing</title>
       <link>https://eng.fieldnation.com/dynamic-code-coverage/</link>
-      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://eng.fieldnation.com/dynamic-code-coverage/</guid>
       <description>Finally a topic deemed worthy of being part of the Field Nation Engineering blog! Unit and Integration tests are an integral part of maintaining quality in software engineering. So, it&amp;rsquo;s not surprising that many software companies try their best to enforce some version of the software testing pyramid. As you can see below, Unit and Integration tests are the base for all forms of testing.

@@ -1,7 +1,7 @@
 +++
 author = "Tim_Mader-Brown"
 comments = true
-date = "2020-08-07"
+date = "2020-08-12"
 draft = false
 image = "images/adapt.jpeg"
 menu = ""

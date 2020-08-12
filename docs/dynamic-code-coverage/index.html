@@ -163,26 +163,26 @@
     </header>
 
     <section class="post-content">
-      <p><strong>Finally a topic that is deemed worthy of being part of the FN Engineering blog!</strong>
-Unit and Integration tests and an integral part of maintaining quality on our software.  So much so that many software companies try their best at enforcing some version of the software testing pyramid.  As you can see below, Unit and Integration tests are represented as the base for all forms of testing.</p>
+      <p><strong>Finally a topic deemed worthy of being part of the Field Nation Engineering blog!</strong>
+Unit and Integration tests are an integral part of maintaining quality in software engineering.  So, it&rsquo;s not surprising that many software companies try their best to enforce some version of the software testing pyramid.  As you can see below, Unit and Integration tests are the base for all forms of testing.</p>
 
 <p><img src="https://eng.fieldnation.com/images/automation-pyramid-1.png" alt="testing pyrimid" /></p>
 
-<p><strong>Ok, so what’s the problem?</strong></p>
+<p><strong>So, what&rsquo;s the problem?</strong></p>
 
-<p><em>“I just wrote the most amazing feature ever and it works perfectly, it doesn’t needs unit tests”</em></p>
+<p><em>“I just wrote the most amazing feature ever and it works perfectly, it doesn’t need unit tests”</em></p>
 
-<p>The problem is that it’s human nature to forget, be lazy, be focused on completing the story, miss stuff in code review or just not willing to write unit tests.  Maybe the developer is tired of all the work it took to develop the feature and now they are out of juice and don’t want to figure out how to write unit tests.</p>
+<p>The problem is that its human nature to forget, be lazy, be over- confident, be focused on completing the story, or miss stuff in code-reviews.  Maybe the developer is tired of all the work it took to develop a feature, and now they&rsquo;re too exhausted to figure out how to write unit tests.</p>
 
-<p>We are solving this problem programmatically.  Rather than relying on code reviews to make sure there is good unit test coverage we are enforcing code coverage using jest’s <code>--coverage</code> feature.</p>
+<p>We are solving this problem programmatically.  Rather than relying on code reviews to make sure there is good unit test coverage, we are enforcing code coverage using jest’s <code>--coverage</code> feature.</p>
 
-<p>The feature is very simple to use, just run the jest tests with the <code>--coverage</code> parameter passed.  You should see a table with something like this on top
+<p>The feature is very simple to use, just run the jest tests with the <code>--coverage</code> parameter passed.  You should see a table with something like this on top:
 <img src="https://eng.fieldnation.com/images/coverage.png" alt="jest coverage" /></p>
 
-<p>Take those values and add them to your jest.config.js
+<p>Take those values and add them to your jest.config.js:
 <img src="https://eng.fieldnation.com/images/jestConfig.png" alt="jest config" /></p>
 
-<p>Cool, that takes care of code coverage at this single point in time, but what about when we add new features?  We found a solution that is a combination of 3 different tools…</p>
+<p>That takes care of code coverage at this single point in time, but what about when we add new features?  We found a solution that is a combination of 3 different tools:</p>
 
 <ul>
 <li><p>Husky</p>
@@ -225,9 +225,9 @@ fi
 </code></pre></li>
 </ol>
 
-<p>With all of these things in place, everytime a dev goes to push their code it will trigger the unit tests to run.  IF the threshold isn’t met then the push will fail.  IF the threshold is higher than jest-it-up will update the config and the shell script will make a new commit with that update.</p>
+<p>With all of this in place, every time a dev goes to push their code it will trigger the unit tests to run.  If the threshold isn’t met, then the push will fail.  If the threshold is higher than jest-it-up, it will update the config and the shell script will make a new commit with that update.</p>
 
-<p>Eventually this should naturally bring the code coverage values up, once we get to an agreed upon value (maybe 90% or 95%) of our top threshold we can remove the dynamic part of this and just use jest’s threshold value.</p>
+<p>Eventually, this should naturally bring the code coverage values up. Once we get to an agreed-upon value (perhaps 90% or 95%) of our top threshold, we can remove the dynamic section and just use jest’s threshold value.</p>
 
     </section>
 
